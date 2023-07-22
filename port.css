@@ -4,30 +4,39 @@
    
 }
 
+
 .navb{
     position: absolute;
-    top: 10px; /* Adjust the top value to control the overlap amount */
+    top:10px; /* Adjust the top value to control the overlap amount */
     left: 0rem; /* Adjust the left value to control the overlap amount */
-    width: 80%; /* Adjust the width to control the overlap amount */
+    width: 100%; /* Adjust the width to control the overlap amount */
+    height: auto;
     z-index: 1; /* A higher z-index value brings an element to the front */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+
+.navb img{
+    margin-top: 10px;
+    color: #fdfcfc;
+    position: absolute;
+    margin-left: 20px;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin-left: 68%;
     padding: 0;
     overflow: hidden;
     font-size: x-large;
     padding-top: 0px;
 
-}
+} 
 
-li {
+li{
     float: left;
-  }
-  
-  li a {
+}
+li a {
     display: block;
     color: rgb(253, 251, 251);
     text-align: left;
@@ -44,9 +53,16 @@ li a:hover {
     font-size: 1.7ch;
 }
 
+.navbar-toggle{
+    display: none;
+}
+
+.primarytext{
+    position: absolute;
+    z-index: 0 ;
+}
 
 .primary h1{
-
     font-style: italic;
     padding-top: 20%;
     padding-left: 10%;
@@ -64,15 +80,23 @@ li a:hover {
 
 .primary{
     position: relative;
+    overflow: hidden;
     color: rgb(251, 252, 253);
-    background: url(assets/rain.gif);
     background-repeat: no-repeat;
-    background-color: #fdfcfc;
+    background-color: #d80d0d00;
     background-size: 100% 100%;
     height: 100vh;
     font-size: 20ch;
+    
 }
 
+#videobcg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:auto;
+    width:auto;
+}
 
 
 
@@ -136,37 +160,105 @@ li a:hover {
     
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
+
+    *{
+        margin: 0%;
+        padding: 0%;
+       
+    }
 
     .navb{
         position: absolute;
-        top: 2rem; /* Adjust the top value to control the overlap amount */
+        top: rem;/* Adjust the top value to control the overlap amount */
         left: 0rem; /* Adjust the left value to control the overlap amount */
         width: 100%; /* Adjust the width to control the overlap amount */
-        z-index: 1; /* A higher z-index value brings an element to the front */
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgba(11, 11, 11, 0.23);
+        backdrop-filter: blur(5px);
         
     } 
-      
+
+    .navbar-toggle{
+        display: contents;
+        position: absolute;
+        z-index: 2;
+                
+    }
+
+    .navbar-toggle img{
+        height: 50px;
+        margin-left: 80%;
+        margin-top: 10%;
+    }
+    #logo{
+        margin-left: 30px;
+        margin-top: 8%;
+        height: 70px;
+    }
+
+    ul{
+        margin-top: 10px;
+    }
+
+    #listitem{
+        display: none;
+    }
+    #listitem.show{
+        padding-top: 50rem;
+        margin-top: 50rem;
+        display: contents;
+        margin-left: 0%;
+        
+    }
+
+    li{
+        float: none;
+        
+    }  
+    
+    #firstnav{
+        margin-top: 100px;
+    }
+
+
+    #menu.show{
+       
+    }
     
     .primary{
         height: 55rem;
         background-size: 200% 100%;
     }
-    .primarytext{
-        margin-top: 17rem;
+
+    .primary h1{
+
+        font-style: italic;
+        padding-top: 60%;
+        padding-left: 10%;
+        font-size:50%;
     }
-    ul{
-        font-size:small;
+    
+    .primary h2{
+    
+        font-style: italic;
+        
+        padding-left: 10%;
+        font-size:20%;
     }
 
     .spot{
         position: absolute;
         
         top: 75%; /* Adjust the top value to control the overlap amount */
-        left: 10%; /* Adjust the left value to control the overlap amount */
-        width: 80%; /* Adjust the width to control the overlap amount */
+        left: 5%; /* Adjust the left value to control the overlap amount */
+        width: 90%; /* Adjust the width to control the overlap amount */
     
+    }
+
+    .spot img{
+        padding: 10px;
+        margin: 6px;
+        
     }
 
     #trackName{
